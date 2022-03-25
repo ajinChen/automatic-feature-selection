@@ -277,7 +277,7 @@ pvalue_hist(p_values, baseline, imps, feas, k=0, alpha=0.05)
 pvalue_hist(p_values, baseline, imps, feas, k=16, alpha=0.05)
 ```
 
-<img src="images/p1.png" width="420">             <img src="images/p2.png" width="420">
+<img src="images/p1.png" width="500">             <img src="images/p2.png" width="500">
 
 The first plot shows us the distribution of a significant feature: <br>
 radius_mean and corresponding p_value: 0.03<br>
