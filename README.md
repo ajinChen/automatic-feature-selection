@@ -76,7 +76,7 @@ fea, imp = top_rank(data, 'diagnosis', method='spearman')
 plot_feature_importances(imp, fea, "Spearman's rank correlation", show_values=True)
 ```
 
-<img src="images/Spearman’s_rank.png" width="500">
+<img src="images/Spearman’s_rank.png" width="550">
 
 ### Kendall Tau Rank Coefficient
 
@@ -89,7 +89,7 @@ fea, imp = top_rank(data, 'diagnosis', method='kendall')
 plot_feature_importances(imp, fea, "Kendall Tau's rank correlation", show_values=True)
 ```
 
-<img src="images/Kendall_Tau.png" width="400">
+<img src="images/Kendall_Tau.png" width="550">
 
 ### Principal component analysis (PCA)
 
@@ -100,7 +100,7 @@ fea, imp = top_rank(data, 'diagnosis', method='PCA')
 plot_feature_importances(imp, fea, 'PCA', show_values=True)
 ```
 
-<img src="images/pca.png" width="400">
+<img src="images/pca.png" width="550">
 
 ### Minimal-redundancy-maximal-relevance (mRMR)
 
@@ -116,7 +116,7 @@ imp, fea = mRMR(data, 'diagnosis', info=True)
 plot_feature_importances(imp, fea, 'mRMR', show_values=True)
 ```
 
-<img src="images/mRMR.png" width="400">
+<img src="images/mRMR.png" width="550">
 
 ## Model-based Feature Importance Strategies
 
@@ -153,7 +153,7 @@ imp, feas = permutation_importance(x_train, y_train, x_val, y_val)
 plot_feature_importances(imp, feas, 'Permutation Importance')
 ```
 
-<img src="images/permu.png" width="400">
+<img src="images/permu.png" width="550">
 
 ### Drop Column Importances
 
@@ -174,7 +174,7 @@ imp, feas = dropcol_importances(x_train, y_train, x_val, y_val)
 plot_feature_importances(imp, feas, 'DropColumn Importance')
 ```
 
-<img src="images/drop.png" width="400">
+<img src="images/drop.png" width="550">
 
 ## Automatic Comparing Strategies for Feature Importance 
 
@@ -199,7 +199,7 @@ Model-based:
 compare_Top_k(data, 'diagnosis', 15)
 ```
 
-<img src="images/compare_k.png"/> 
+<img src="images/compare_k.png" width="800" > 
 
 Procedure:
 
@@ -240,7 +240,7 @@ for mode in modes:
     print(best_model)
 ```
 
-<img src="images/auto_select.png"/> 
+<img src="images/auto_select.png" width="500"> 
 
 ## Variance for Feature Importances
 
@@ -259,7 +259,7 @@ var_error = feature_variance(data, 'diagnosis')
 plot_feature_importances(imp, feas, 'SHAP Importance', show_var=var_error)
 ```
 
-<img src="images/var.png"/> 
+<img src="images/var.png" width="550"> 
 
 After fitting the model, we can get feature importance from Random Forest. The result shows that sentimental score is the model important feature in the model. Playtime, Developer, and Price are also important to predict Voted up. Then we tested the best model on the validation set, the accuracy is about 0.97.
 
@@ -281,9 +281,8 @@ pvalue_hist(p_values, baseline, imps, feas, k=0, alpha=0.05)
 pvalue_hist(p_values, baseline, imps, feas, k=16, alpha=0.05)
 ```
 
-<img src="images/p1.png" width="400">
-
-<img src="images/p2.png" width="400" align="right">
+<img src="images/p1.png" width="350">
+<img src="images/p2.png" width="350" align="right">
 
 The first plot shows us the distribution of a significant feature: radius_mean and corresponding p_value: 0.03
 The second plot shows us the distribution of an insignificant feature: concavity_se and corresponding p_value: 1.0
