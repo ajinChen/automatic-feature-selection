@@ -196,7 +196,7 @@ Model-based:
 compare_Top_k(data, 'diagnosis', 15)
 ```
 
-<img src="images/compare_k.png" width="700" height='600'> 
+<img src="images/compare_k.png" width="600" height='500'> 
 
 Procedure:<br>
 a. Preprocessing data for model-based and data-based method<br>
