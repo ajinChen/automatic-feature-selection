@@ -12,8 +12,7 @@ In this repo, I will introduce several techniques including python code for feat
 4. Automatic feature selection algorithm
 5. Variance for feature importances
 6. Empirical p-values for feature importances
-
-<img src="pictures/pipeline.png" width="350" align="right"> 
+<img src="images/feature-importance.png" width="350" align="right"> 
 
 Link to code: [click here](https://github.com/ajinChen/automatic-feature-selection/blob/main/featimp.py).
 
