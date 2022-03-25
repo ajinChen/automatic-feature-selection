@@ -4,8 +4,8 @@
 
 Feature importances and selection is a critical topic that helps us to understand how data works on the machine learning algorithm, which can also help us select promising features among the large data.
 
-In this repo, I will introduce several techniques including python code for feature <br>
-importances and selection:
+In this repo, I will introduce several techniques including python <br> 
+code for feature importances and selection:
 <img src="images/feature-importance.png" width="350" align="right"> 
 1. Data-based feature importances strategies
 2. Model-based feature importance strategies
@@ -279,5 +279,7 @@ pvalue_hist(p_values, baseline, imps, feas, k=16, alpha=0.05)
 
 <img src="images/p1.png" width="420">             <img src="images/p2.png" width="420">
 
-The first plot shows us the distribution of a significant feature: radius_mean and corresponding p_value: 0.03<br>
-The second plot shows us the distribution of an insignificant feature: concavity_se and corresponding p_value: 1.0
+The first plot shows us the distribution of a significant feature: <br>
+radius_mean and corresponding p_value: 0.03<br>
+The second plot shows us the distribution of an insignificant feature: <br>
+concavity_se and corresponding p_value: 1.0
