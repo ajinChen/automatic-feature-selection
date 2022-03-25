@@ -106,8 +106,8 @@ plot_feature_importances(imp, fea, 'PCA', show_values=True)
 
 Minimal-redundancy-maximal-relevance is an ideal method to deal with codependencies problems between the features, which measures relevance and low redundancy at the same time.
 
-`Relevance`: The coefficient between the individual feature and the target
-`Redundancy`: The coefficient between each individual feature.
+1. `Relevance`: The coefficient between the individual feature and the target
+2. `Redundancy`: The coefficient between each individual feature.
 
 The ideal feature we need should have high relevance and low redundancy, and we can see how the algorithm works when you set the `info=True`.
 
@@ -141,10 +141,10 @@ The permutation importance method measures the features by the difference of val
 
 Procedure:
 
-1. Compute the baseline on validation metric for a model trained on all features
-2. Permute evaluating feature in the validation set
-3. Compute validation score on new validation data
-4. The importance score is the difference between two validation scores.
+a. Compute the baseline on validation metric for a model trained on all features
+b. Permute evaluating feature in the validation set
+c. Compute validation score on new validation data
+d. The importance score is the difference between two validation scores.
 
 However, this method may create nonsensical records through permutation.
 
@@ -161,11 +161,11 @@ Drop column importances method measures the features by the difference of valida
 
 Procedure:
 
-1. Compute the baseline on validation metric for a model trained on all features
-2. Drop the feature you want to evaluate from the data set
-3. Retrain the model
-4. Compute validation loss
-5. The importance score is the difference between two validation scores.
+a. Compute the baseline on validation metric for a model trained on all features
+b. Drop the feature you want to evaluate from the data set
+c. Retrain the model
+d. Compute validation loss
+e. The importance score is the difference between two validation scores.
 
 However, this method needs to retrain the model, which will cost a lot of the data is large. And the codependent features often result in 0.
 
@@ -195,13 +195,6 @@ Model-based:
 2. Drop column importances
 3. SHAP
 
-Procedure:
-
-1. Preprocessing data for model-based and data-based method
-2. Calculate the top k features on different methods
-3. Calculate different loss on 1 to k features for each method
-4. Display all losses on the plot
-
 ```python
 compare_Top_k(data, 'diagnosis', 15)
 ```
@@ -210,10 +203,10 @@ compare_Top_k(data, 'diagnosis', 15)
 
 Procedure:
 
-1. Preprocessing data for model-based and data-based method
-2. Calculate the top k features on different methods
-3. Calculate different loss on 1 to k features for each method
-4. Display all losses on the plot
+a. Preprocessing data for model-based and data-based method
+b. Calculate the top k features on different methods
+c. Calculate different loss on 1 to k features for each method
+d. Display all losses on the plot
 
 ## Automatic Feature Selection
 
@@ -231,12 +224,12 @@ In this section, I will introduce an automatic feature selection approach that o
 The basic rule is that we drop the lowest importance until validation loss does not increases, return the previous best model and drop the feature list.
 Procedure:
 
-1. Use the method you input to calculate the feature importances
-2. Use all features to calculate the baseline validation loss
-3. Drop the lowest importance feature
-4. Retrain the model and recompute the validation loss
-5. If validation loss decreases, we repeat 3, 4
-6. Return the best model before the last iteration.
+a. Use the method you input to calculate the feature importances
+b. Use all features to calculate the baseline validation loss
+c. Drop the lowest importance feature
+d. Retrain the model and recompute the validation loss
+e. If validation loss decreases, we repeat 3, 4
+f. Return the best model before the last iteration.
 
 ```python
 modes = ['spearman', 'pearson', 'kendall', 'pca', 'mrmr', 'permutation', 'dropcol', 'shap']
