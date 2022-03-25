@@ -141,10 +141,10 @@ The permutation importance method measures the features by the difference of val
 
 Procedure:
 
-a. Compute the baseline on validation metric for a model trained on all features
-b. Permute evaluating feature in the validation set
-c. Compute validation score on new validation data
-d. The importance score is the difference between two validation scores.
+a. Compute the baseline on validation metric for a model trained on all features<br>
+b. Permute evaluating feature in the validation set<br>
+c. Compute validation score on new validation data<br>
+d. The importance score is the difference between two validation scores.<br>
 
 However, this method may create nonsensical records through permutation.
 
@@ -161,11 +161,11 @@ Drop column importances method measures the features by the difference of valida
 
 Procedure:
 
-a. Compute the baseline on validation metric for a model trained on all features
-b. Drop the feature you want to evaluate from the data set
-c. Retrain the model
-d. Compute validation loss
-e. The importance score is the difference between two validation scores.
+a. Compute the baseline on validation metric for a model trained on all features<br>
+b. Drop the feature you want to evaluate from the data set<br>
+c. Retrain the model<br>
+d. Compute validation loss<br>
+e. The importance score is the difference between two validation scores<br>
 
 However, this method needs to retrain the model, which will cost a lot of the data is large. And the codependent features often result in 0.
 
@@ -199,14 +199,14 @@ Model-based:
 compare_Top_k(data, 'diagnosis', 15)
 ```
 
-<img src="images/compare_k.png" width="800" > 
+<img src="images/compare_k.png" width="800" height='600'> 
 
 Procedure:
 
-a. Preprocessing data for model-based and data-based method
-b. Calculate the top k features on different methods
-c. Calculate different loss on 1 to k features for each method
-d. Display all losses on the plot
+a. Preprocessing data for model-based and data-based method<br>
+b. Calculate the top k features on different methods<br>
+c. Calculate different loss on 1 to k features for each method<br>
+d. Display all losses on the plot<br>
 
 ## Automatic Feature Selection
 
@@ -224,12 +224,12 @@ In this section, I will introduce an automatic feature selection approach that o
 The basic rule is that we drop the lowest importance until validation loss does not increases, return the previous best model and drop the feature list.
 Procedure:
 
-a. Use the method you input to calculate the feature importances
-b. Use all features to calculate the baseline validation loss
-c. Drop the lowest importance feature
-d. Retrain the model and recompute the validation loss
-e. If validation loss decreases, we repeat 3, 4
-f. Return the best model before the last iteration.
+a. Use the method you input to calculate the feature importances<br>
+b. Use all features to calculate the baseline validation loss<br>
+c. Drop the lowest importance feature<br>
+d. Retrain the model and recompute the validation loss<br>
+e. If validation loss decreases, we repeat 3, 4<br>
+f. Return the best model before the last iteration.<br>
 
 ```python
 modes = ['spearman', 'pearson', 'kendall', 'pca', 'mrmr', 'permutation', 'dropcol', 'shap']
@@ -281,7 +281,7 @@ pvalue_hist(p_values, baseline, imps, feas, k=0, alpha=0.05)
 pvalue_hist(p_values, baseline, imps, feas, k=16, alpha=0.05)
 ```
 
-<img src="images/p1.png" width="350">
+<img src="images/p1.png" width="350" align="left">
 <img src="images/p2.png" width="350" align="right">
 
 The first plot shows us the distribution of a significant feature: radius_mean and corresponding p_value: 0.03
