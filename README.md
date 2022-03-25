@@ -5,10 +5,10 @@
 Feature importances and selection is a critical topic that helps us to understand how data works on the machine learning algorithm, which can also help us select promising features among the large data.
 
 In this repo, I will introduce several techniques including python code for feature importances and selection:
-
+<img src="images/feature-importance.png" width="350" align="right"> 
 1. Data-based feature importances strategies
 2. Model-based feature importance strategies
-3. Automatic comparing strategy for feature importances<img src="images/feature-importance.png" width="350" align="right"> 
+3. Automatic comparing strategy for feature importances
 4. Automatic feature selection algorithm
 5. Variance for feature importances
 6. Empirical p-values for feature importances
