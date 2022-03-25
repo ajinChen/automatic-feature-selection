@@ -133,7 +133,7 @@ There are several model-based importance strategies, including:
 1. Permutation importances
 2. Drop column importances
 
-I wrapped each of method into individual functions and return the top k importance values and corresponding column name.
+Users can use individual functions and return the top k importance values and corresponding column name.
 
 ### Permutation Importances
 
@@ -278,7 +278,7 @@ pvalue_hist(p_values, baseline, imps, feas, k=0, alpha=0.05)
 pvalue_hist(p_values, baseline, imps, feas, k=16, alpha=0.05)
 ```
 
-<img src="images/p1.png" width="350"><img src="images/p2.png" width="350">
+<img src="images/p1.png" width="350">    <img src="images/p2.png" width="350">
 
 The first plot shows us the distribution of a significant feature: radius_mean and corresponding p_value: 0.03
 The second plot shows us the distribution of an insignificant feature: concavity_se and corresponding p_value: 1.0
