@@ -76,7 +76,7 @@ fea, imp = top_rank(data, 'diagnosis', method='spearman')
 plot_feature_importances(imp, fea, "Spearman's rank correlation", show_values=True)
 ```
 
-<img src="images/Spearman’s_rank.png" width="400">
+<img src="images/Spearman’s_rank.png" width="500">
 
 ### Kendall Tau Rank Coefficient
 
@@ -199,7 +199,7 @@ Model-based:
 compare_Top_k(data, 'diagnosis', 15)
 ```
 
-<img src="pictures/compare_k.png"/> 
+<img src="images/compare_k.png"/> 
 
 Procedure:
 
@@ -240,7 +240,7 @@ for mode in modes:
     print(best_model)
 ```
 
-<img src="pictures/auto_select.png"/> 
+<img src="images/auto_select.png"/> 
 
 ## Variance for Feature Importances
 
@@ -259,11 +259,11 @@ var_error = feature_variance(data, 'diagnosis')
 plot_feature_importances(imp, feas, 'SHAP Importance', show_var=var_error)
 ```
 
-<img src="pictures/var.png"/> 
+<img src="images/var.png"/> 
 
 After fitting the model, we can get feature importance from Random Forest. The result shows that sentimental score is the model important feature in the model. Playtime, Developer, and Price are also important to predict Voted up. Then we tested the best model on the validation set, the accuracy is about 0.97.
 
-<img src="pictures/var.png" width="550">
+<img src="images/var.png" width="550">
 
 ## Empirical p-values for Feature Importances
 
@@ -281,9 +281,9 @@ pvalue_hist(p_values, baseline, imps, feas, k=0, alpha=0.05)
 pvalue_hist(p_values, baseline, imps, feas, k=16, alpha=0.05)
 ```
 
-<img src="pictures/p1.png" width="550">
+<img src="images/p1.png" width="400">
 
-<img src="pictures/p2.png" width="550">
+<img src="images/p2.png" width="400" align="right">
 
 The first plot shows us the distribution of a significant feature: radius_mean and corresponding p_value: 0.03
 The second plot shows us the distribution of an insignificant feature: concavity_se and corresponding p_value: 1.0
