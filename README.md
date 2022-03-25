@@ -137,10 +137,9 @@ I wrapped each of method into individual functions and return the top k importan
 
 ### Permutation Importances
 
-The permutation importance method measures the features by the difference of validation loss on validation data before and after the permutation, which don't need to retrain model and can apply to any kind of machine learning algorithm.
+The permutation importance method measures the features by the difference of validation loss on validation data before and after the permutation, which don't need to retrain model and can apply to any kind of machine learning algorithm.<br>
 
-Procedure:
-
+Procedure:<br>
 a. Compute the baseline on validation metric for a model trained on all features<br>
 b. Permute evaluating feature in the validation set<br>
 c. Compute validation score on new validation data<br>
@@ -157,10 +156,9 @@ plot_feature_importances(imp, feas, 'Permutation Importance')
 
 ### Drop Column Importances
 
-Drop column importances method measures the features by the difference of validation loss on training data before and after the dropping, which need to retrain model and can examine the importance of any feature or combination of features.
+Drop column importances method measures the features by the difference of validation loss on training data before and after the dropping, which need to retrain model and can examine the importance of any feature or combination of features.<br>
 
-Procedure:
-
+Procedure:<br>
 a. Compute the baseline on validation metric for a model trained on all features<br>
 b. Drop the feature you want to evaluate from the data set<br>
 c. Retrain the model<br>
@@ -199,10 +197,9 @@ Model-based:
 compare_Top_k(data, 'diagnosis', 15)
 ```
 
-<img src="images/compare_k.png" width="800" height='600'> 
+<img src="images/compare_k.png" width="700" height='700'> 
 
-Procedure:
-
+Procedure:<br>
 a. Preprocessing data for model-based and data-based method<br>
 b. Calculate the top k features on different methods<br>
 c. Calculate different loss on 1 to k features for each method<br>
@@ -222,8 +219,8 @@ In this section, I will introduce an automatic feature selection approach that o
 8. SHAP -> `shap`
 
 The basic rule is that we drop the lowest importance until validation loss does not increases, return the previous best model and drop the feature list.
-Procedure:
 
+Procedure:<br>
 a. Use the method you input to calculate the feature importances<br>
 b. Use all features to calculate the baseline validation loss<br>
 c. Drop the lowest importance feature<br>
@@ -281,8 +278,7 @@ pvalue_hist(p_values, baseline, imps, feas, k=0, alpha=0.05)
 pvalue_hist(p_values, baseline, imps, feas, k=16, alpha=0.05)
 ```
 
-<img src="images/p1.png" width="350" align="left">
-<img src="images/p2.png" width="350" align="right">
+<img src="images/p1.png" width="350"><img src="images/p2.png" width="350">
 
 The first plot shows us the distribution of a significant feature: radius_mean and corresponding p_value: 0.03
 The second plot shows us the distribution of an insignificant feature: concavity_se and corresponding p_value: 1.0
