@@ -4,8 +4,8 @@
 
 Feature importances and selection is a critical topic that helps us to understand how data works on the machine learning algorithm, which can also help us select promising features among the large data.
 
-In this repo, I will introduce several techniques including <br>
-python code for feature importances and selection:
+In this repo, I will introduce several techniques including python code for feature <br>
+importances and selection:
 <img src="images/feature-importance.png" width="350" align="right"> 
 1. Data-based feature importances strategies
 2. Model-based feature importance strategies
